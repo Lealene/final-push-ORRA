@@ -1,0 +1,36 @@
+.gsc-data/
+.claude/settings.local.json
+
+# Client/commercial docs — local only
+/docs/ARCHITECTURE-FOR-GARRY.md
+/docs/ARCHITECTURE-LOCKED.md
+/docs/FEASIBILITY-STUDY.md
+/docs/MVP-V1-SCOPE.md
+/docs/MVP-V1-PROPOSAL.md
+/docs/V1-DELIVERABLES.md
+
+# Dependencies
+node_modules/
+
+# Builds
+.next/
+.turbo/
+dist/
+*.tsbuildinfo
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Test
+coverage/
+playwright-report/
+
+# Vercel / Payload
+.vercel/
+.payload/
+
+# OS / logs
+.DS_Store
+*.log

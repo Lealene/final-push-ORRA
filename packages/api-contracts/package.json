@@ -1,0 +1,26 @@
+{
+  "name": "@app/api-contracts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rm -rf .turbo *.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@app/eslint-config": "workspace:*",
+    "@app/prettier-config": "workspace:*",
+    "@app/typescript-config": "workspace:*",
+    "@app/vitest-config": "workspace:*",
+    "eslint": "^9.13.0",
+    "typescript": "^6.0.0",
+    "vitest": "^4.1.0"
+  },
+  "prettier": "@app/prettier-config"
+}

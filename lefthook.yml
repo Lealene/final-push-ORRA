@@ -1,0 +1,26 @@
+# Lefthook — fast, parallel git hooks.
+# Install: `pnpm lefthook install` (runs automatically via `pnpm install` prepare).
+#
+# Linter/formatter commands use `pnpm exec` (workspace-installed versions) instead
+# of `pnpm dlx` (which fetches the latest published version and would diverge from
+# what `pnpm typecheck` / `pnpm lint` use in CI).
+
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: '*.{ts,tsx,js,jsx,mjs,cjs,json,md,css,yml,yaml}'
+      run: pnpm exec prettier --write --ignore-unknown {staged_files}
+      stage_fixed: true
+    eslint:
+      glob: '*.{ts,tsx,js,jsx,mjs,cjs}'
+      run: pnpm exec eslint --fix --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    typecheck:
+      run: pnpm turbo run typecheck
+    lint:
+      run: pnpm turbo run lint

@@ -1,0 +1,15 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'tooling/*'
+
+# Build-script allowlist — these need to run at install time:
+#   sharp           → Payload image pipeline
+#   lefthook        → installs the git hook binary
+#   unrs-resolver   → Next.js / oxc resolver native module
+#   esbuild         → bundler native binary
+allowBuilds:
+  esbuild: true
+  lefthook: true
+  sharp: true
+  unrs-resolver: true

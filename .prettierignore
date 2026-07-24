@@ -1,0 +1,17 @@
+# Auto-generated files — owned by their generators, not us.
+**/next-env.d.ts
+apps/backend/src/payload-types.ts
+apps/backend/src/payload-generated-schema.ts
+apps/backend/src/app/(payload)/admin/importMap.js
+pnpm-lock.yaml
+.next/
+.turbo/
+dist/
+coverage/
+node_modules/
+
+# Skill bundles and pre-existing docs — owned by their authors, not the formatter.
+# Add paths back to format coverage only after intentional review.
+.agents/
+.claude/skills/
+docs/
