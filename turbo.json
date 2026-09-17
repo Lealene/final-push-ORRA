@@ -2,7 +2,20 @@
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
   "globalDependencies": [".env.example", ".nvmrc"],
-  "globalEnv": ["NODE_ENV", "CI"],
+  "globalEnv": [
+    "NODE_ENV",
+    "CI",
+    "DATABASE_URL",
+    "PAYLOAD_SECRET",
+    "PAYLOAD_PUBLIC_SERVER_URL",
+    "SENTRY_DSN",
+    "SENTRY_AUTH_TOKEN",
+    "AXIOM_TOKEN",
+    "AXIOM_DATASET",
+    "NEXT_PUBLIC_SITE_URL",
+    "NEXT_PUBLIC_BACKEND_URL",
+    "NEXT_PUBLIC_SENTRY_DSN"
+  ],
   "tasks": {
     "dev": {
       "cache": false,
