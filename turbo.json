@@ -1,6 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.json",
-  "ui": "tui",
+  "ui": "stream",
   "globalDependencies": [".env.example", ".nvmrc"],
   "globalEnv": [
     "NODE_ENV",
